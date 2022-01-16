@@ -1,1 +1,2 @@
-#Use of this page is optional. If you use code here, make sure either import page1 or from page1 import * appear on your main.py page.
+#these are the words for hangman
+state_names = ["scandal", "bohemia", "study", "scarlet", "pips", "carbuncle", "speckled", "band", "engineer", "beryl", "coronet", "copper", "breeches", "blaze", "ritual", "puzzle", "crooked", "hound", "resident", "patient", "naval", "treaty", "builder", "priory", "abbey", "grange", "second", "stain", "stain", "wisteria", "baker", "elementary", "impossible", "cesspool", "curious", "incident", "dog", "night", "time"]
