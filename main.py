@@ -15,7 +15,7 @@ guesses = []
 still_going = False
 missed_letters = []
 total_guesses = 0
-
+#the instructions
 print("Your word is", len(correct_state), "letters long."); time.sleep(1)
 print("Guess all letters in lowercase.") ; time.sleep(1)
 print("You can guess 10 wrong letters."); time.sleep(1)
@@ -23,7 +23,8 @@ print("And...go!")
 
 while still_going == False:
   wronglettercount = 0
-  for letter in correct_state:
+  #the main loop, checks if the guess is in the word
+  for letter in correct_state: 
       if letter in guesses:
           print(letter, end=" ")
       else:
@@ -33,8 +34,10 @@ while still_going == False:
     break
   print("")
   guess = input("Enter a letter: ")
+  #checks if inputs are letters
   if str.isalpha(guess) == False:
     print("That's not a letter.")
+  #checks if more than one letter is entered
   elif len(guess) > 1:
     print("Too many letters.")
   elif guess not in correct_state:
@@ -51,6 +54,7 @@ while still_going == False:
   for letter in correct_state:
     if letter not in guesses:
       done = False
+  #checks if done
   if counter == 0:
     break
   
@@ -62,7 +66,7 @@ elif still_going == False:
 
 print(" ")
 get_def = input("Enter yes to find out the definition of your word or no to end the game: ") 
-
+#gets the definition
 if get_def == "yes" or get_def == "Yes":
   dict = PyDictionary()
   meaning = dict.meaning(correct_state)
